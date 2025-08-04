@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Ashley Shaw</h1>
+            <p>Senior Technical Developer</p>
+            <div id="navbar-placeholder"></div>
+			<script>
+				fetch('navbar.html')
+					.then(response => response.text())
+					.then(html => {
+						document.getElementById('navbar-placeholder').innerHTML = html;
+					});
+			</script>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="company-links">
+            <h3>Explore My Work</h3>
+            <ul>
+                <li><a href="company-a.html">View projects from Company A</a></li>
+                <li><a href="company-b.html">View projects from Company B</a></li>
+            </ul>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
