@@ -10,8 +10,14 @@
 
     <header>
         <div class="container">
-            <h1>Ashley Shaw</h1>
-            <p>Senior Technical Developer</p>
+            <div id="header-placeholder></div>
+			<script>
+				fetch('header.html')
+					.then(response => response.text())
+					.then(html => {
+						document.getElementById('header-placeholder').innerHTML = html;
+					});
+			</script>
             <div id="navbar-placeholder"></div>
 			<script>
 				fetch('navbar.html')
