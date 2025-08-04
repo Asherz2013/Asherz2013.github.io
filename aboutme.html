@@ -12,13 +12,14 @@
         <div class="container">
             <h1>Ashley Shaw</h1>
             <p>Senior Technical Developer</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="barb.html">Build a Rocket Boy</a></li>
-                    <li><a href="jagex.html">Jagex</a></li>
-                </ul>
-            </nav>
+            <div id="navbar-placeholder"></div>
+			<script>
+				fetch('navbar.html')
+					.then(response => response.text())
+					.then(html => {
+						document.getElementById('navbar-placeholder').innerHTML = html;
+					});
+			</script>
         </div>
     </header>
 
